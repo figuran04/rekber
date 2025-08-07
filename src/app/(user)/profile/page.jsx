@@ -14,9 +14,9 @@ const ProfilePage = () => {
   }
 
   return (
-    <main className="flex-1 p-4 space-y-6">
+    <main className="flex-1 space-y-6">
       {/* Informasi Pengguna */}
-      <div className="p-6 text-center bg-white shadow rounded-xl">
+      {/* <div className="p-6 text-center bg-white shadow rounded-xl">
         <Image
           src={user.avatar}
           alt={user.name}
@@ -44,10 +44,43 @@ const ProfilePage = () => {
             Edit Profil
           </Link>
         </div>
+      </div> */}
+      <div className="bg-indigo-500 p-4 flex flex-col gap-2 relative">
+        <div className="flex items-center gap-2">
+          <div className="icon w-20 aspect-square bg-white rounded-full">
+          </div>
+          <div className="right text-white">
+            <p className="text-xl font-semibold">Full Name</p>
+            <p>username</p>
+          </div>
+        </div>
+        <div className="flex justify-between text-white items-center">
+          <p>Address</p>
+          <button className="rounded-full text-indigo-500 bg-white px-4 py-1">Edit</button>
+        </div>
+        <div className="w-full bg-white shadow rounded-xl z-10">
+          <div className="flex py-4">
+            <div className="flex gap-2 w-full px-4">
+              <div className="rounded-full bg-indigo-500 w-10 aspect-square"></div>
+              <div>
+                <p className="text-sm">Income</p>
+                <p className="text-sm">Rp 200.000</p>
+              </div>
+            </div>
+            <div className="flex gap-2 w-full px-4 border-l border-black border-l-2">
+              <div className="rounded-full bg-indigo-500 w-10 aspect-square"></div>
+              <div>
+                <p className="text-sm">Cash Out</p>
+                <p className="text-sm">Rp 200.000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="bg-gray-100 absolute bottom-0 h-12 left-0 w-full"></div>
       </div>
 
       {/* Menu Tambahan */}
-      <div className="p-4 space-y-4 bg-white shadow rounded-xl">
+      <div className="p-4 space-y-4 m-4 bg-white shadow rounded-xl">
         <Link href="/profile/security" className="block text-sm text-gray-700 hover:text-violet-700">
           🔒 Keamanan & Sandi
         </Link>
